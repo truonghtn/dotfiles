@@ -1,0 +1,6 @@
+Plug 'scrooloose/nerdtree'
+Plug 'KeitaNakamura/neodark.vim'
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-rails'
+Plug 'Shougo/neocomplete.vim'
+Plug 'majutsushi/tagbar'

@@ -1,0 +1,23 @@
+" Neocomplete configurations
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_smart_case = 1
+
+" Tagbar configuations
+nmap <F8> :TagbarToggle<CR>
+
+" Shortcut NERDTreeToggle
+map <C-n> :NERDTreeToggle<CR>
+" Open NERDTree automatically when vim starts up on opening a directory
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
+
+" Use theme monokai
+syntax on
+let g:neodark#use_256color = 1
+let g:neodark#background = '#000000'
+colorscheme neodark
+
+" Auto complete when tab
+autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
+autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
